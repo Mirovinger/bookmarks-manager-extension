@@ -126,10 +126,15 @@ function addBookmarkToFolder(bookmark, parent_element, options) {
             }
         });
         var lnk = document.createElement("td");
-        var a = document.createElement("a");
-        a.href = bookmark.url;
-        a.appendChild(document.createTextNode("open"));
-        lnk.appendChild(a);
+        var opennode = document.createTextNode("open");
+        if (bookmark.url.match(/^javascript:/i)) {
+            lnk.appendChild(opennode);
+        } else {
+            var a = document.createElement("a");
+            a.href = bookmark.url;
+            a.appendChild(opennode);
+            lnk.appendChild(a);
+        }
         tr.appendChild(lnk);
     } else {
         title.setAttribute("colspan", "3");

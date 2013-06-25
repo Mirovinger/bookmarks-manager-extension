@@ -24,7 +24,9 @@ function addBookmarkToFolder(bookmark, parent) {
         content.appendChild(document.createTextNode(bookmark.title || "Untitled bookmark"));
         content.title = bookmark.title;
         content.onclick = function(e) {
-            chrome.tabs.update({url: content.href});
+            chrome.tabs.update({url: unescape(content.href)});
+            e.preventDefault();
+            return false;
         };
     } else {
         content = document.createElement("details");
