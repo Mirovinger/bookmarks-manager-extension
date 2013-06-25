@@ -4,7 +4,7 @@ bookmarks-manager-extension
 
 Bookmarks Manager adds the most important bookmark functionality to Opera 15, allowing importing bookmarks exported from Opera 12.
 
-## Set up ## 
+## Set up 
 
 1) Export your bookmarks from Opera 12 with Bookmarks > Manage Bookmarks > File > Export as HTML. This saves them in the (defacto) standard that's also used by Safari, Firefix, Delicious and others.
 
@@ -29,7 +29,7 @@ A supplementary extension that adds a star icon inside the URL bar next to "Add 
 This extension was made by Stuart Langridge (www.kryogenix.org) and is available on Github. Thanks to Mağruf Çolakoğlu for alpha testing, and generous people who allowed us to use their real bookmarks files for testing (given the format is so ill-documented).
 
 
-# TODO ##
+## TODO ##
 
 - Move "Filter bookmarks" into pop-up; increase its function
 - A supplementary extension to add one-click bookmarking inside the address bar. (Must be separate as Chrome extensions can't have both a page action and a browser action)
