@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<title>Bookmark Manager Options and Import</title>
+<link rel="stylesheet" href="options.css">
+</head>
+<body>
+
+<!-- used for drag and drop.
+     Disabled because you can't scroll the page by dragging a thing to the
+     top of the window, although you can scroll by dragging to the bottom.
+     https://code.google.com/p/chromium/issues/detail?id=253469
+
+<div id="mover" draggable="true">move</div>
+<div id="movertext">Bookmark</div><div id="movertexthider"></div>
+-->
+
+<h1>Bookmark Manager</h1>
+<details id="importarea">
+    <summary>Import bookmarks</summary>
+    <div id="dropzone">
+    <p>To import your bookmarks, first export them from Opera 12. Go to <strong>Bookmarks > Manage bookmarks > File > Export as HTML</strong> and save. (This produces a Netscape-format HTML bookmarks file.)</p>
+    <p>Then browse to your bookmarks file and upload them. <input type="file" id="fileimport">
+    <span id="import-out"></span></p>
+    </div>
+</details>
+<form>
+    <p><label>Filter bookmarks <input type="search" id="filter"></label></p>
+</form>
+<div id="bmlightbox">
+    <button id="lightboxcancel">&times;</button>
+    <h2>Moving "<span id="bmname">bookmark</span>"</h2>
+    <div id="bmlightboxbody">
+<table id="bookmarks">
+    <tr data-bookmark-id="0" data-depth="0"><td colspan="3">Bookmarks <button>+ new folder</button></td><td></td><td></td></tr>
+</table>
+    </div>
+</div>
+
+<details>
+    <summary>Advanced settings</summary>
+    <button id="export">Export bookmarks (in <em>Netscape bookmarks</em> format)</button>
+    <button id="wipe">Delete all bookmarks</button> <span id="wipe-out"></span>
+<!--    <p><a href="test/test.html">Run the test suite</a></p> -->
+</details>
+
+<script src="options.js"></script>
+</body>
+</html>
