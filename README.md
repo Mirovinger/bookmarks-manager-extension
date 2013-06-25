@@ -26,7 +26,7 @@ A supplementary extension that adds a star icon inside the URL bar next to "Add 
 
 ## Credits ##
 
-This extension was made by Stuart Langridge (www.kryogenix.org) and is available on Github. Thanks to Mağruf Çolakoğlu for alpha testing, and generous people who allowed us to use their real bookmarks files for testing (given the format is so ill-documented).
+This extension was made by Stuart Langridge (www.kryogenix.org) and is available on Github. Thanks to Mağruf Çolakoğlu for alpha testing, and generous people who allowed us to use their real bookmarks files for testing (given the format is [so ill-documented](http://msdn.microsoft.com/en-us/library/aa753582(v=vs.85).aspx)).
 
 
 ## TODO ##
