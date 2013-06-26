@@ -2,7 +2,7 @@ bookmarks-manager-extension
 ===========================
 
 
-Bookmarks Manager adds the most important bookmark functionality to Opera 15, allowing importing bookmarks exported from Opera 12.
+Bookmarks Manager adds basic bookmark functionality to Opera 15, allowing importing bookmarks exported from Opera 12.
 
 ## Set up 
 
@@ -26,7 +26,7 @@ A supplementary extension that adds a star icon inside the URL bar next to "Add 
 
 ## Credits ##
 
-This extension was made by Stuart Langridge (www.kryogenix.org) and is available on Github. Thanks to Mağruf Çolakoğlu for alpha testing, and generous people who allowed us to use their real bookmarks files for testing (given the format is so ill-documented - http://msdn.microsoft.com/en-us/library/aa753582(v=vs.85).aspx.
+This extension was made by Stuart Langridge (www.kryogenix.org) and Vadim Makeev ([@pepelsbey](http://twitter.com/pepelsbey)) with moral support by Bruce Lawson and is available on Github. Thanks to Mağruf Çolakoğlu for alpha testing, and generous people who allowed us to use their real bookmarks files for testing (given the format is so ill-documented - http://msdn.microsoft.com/en-us/library/aa753582(v=vs.85).aspx.
 
 
 ## TODO ##
