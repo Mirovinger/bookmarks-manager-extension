@@ -126,7 +126,7 @@ function addBookmarkToFolder(bookmark, parent_element, options) {
             }
         });
         var lnk = document.createElement("td");
-        var opennode = document.createTextNode("open");
+        var opennode = document.createTextNode("Open");
         if (bookmark.url.match(/^javascript:/i)) {
             lnk.appendChild(opennode);
         } else {
