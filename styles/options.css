@@ -1,84 +1,151 @@
+@import 'reset.css';
+@import 'global.css';
+
+html {
+	background:#9A9FA6;
+	}
 body {
-    font-family: sans-serif;
-}
-table {
-    width: 100%;
-}
-td {
-    background: #f7f6f5;
-    padding: 6px;
-    -webkit-transition: background-color 0.6s ease;
-}
-tr.folder td {
-    background: #e7e6e5;
-}
-tr[data-depth="0"] td:first-child { padding-left: 6px; }
-tr[data-depth="1"] td:first-child { padding-left: 1em; }
-tr[data-depth="2"] td:first-child { padding-left: 2em; }
-tr[data-depth="3"] td:first-child { padding-left: 3em; }
-tr[data-depth="4"] td:first-child { padding-left: 4em; }
-tr[data-depth="5"] td:first-child { padding-left: 5em; }
-tr[data-depth="6"] td:first-child { padding-left: 6em; }
-tr[data-depth="7"] td:first-child { padding-left: 7em; }
-tr[data-depth="8"] td:first-child { padding-left: 8em; }
-tr[data-depth="9"] td:first-child { padding-left: 9em; }
-tr td:first-child { padding-left: 9em; }
+	position:relative;
+	margin:30px auto;
+	padding:20px 0;
+	max-width:800px;
+	border-radius:12px;
+	border:1px solid #7d8187;
+	background:#FFF;
+	}
+@media (max-width:860px) {
+	body {
+		margin:0;
+		max-width:none;
+		border-radius:0;
+		}
+	}
 
-#bookmarks tr.folder td:first-child button, #bookmarks tr[data-bookmark-id="0"] button { float: right; }
+/* Header */
+.header {
+	padding:0 0 0 20px;
+	}
+.header h1 {
+	color:#494949;
+	font-weight:bold;
+	font-size:18px;
+	}
+	.filter {
+		position:absolute;
+		top:20px;
+		right:20px;
+		}
 
+/* Table */
+.table {
+	width:100%;
+	}
+	.table td {
+		padding:6px;
+		-webkit-transition:background-color 0.6s ease;
+		}
+	.table .folder td {
+		background:#EEE;
+		}
 tr.yellow td {
-    background-color: yellow;
-}
+	background-color:#FFF9C7;
+	}
 
-td.move { cursor: move; }
+td.move {
+	cursor:move;
+	}
 tr.over td {
-    background: #d7d6d5;
-}
+	background:#d7d6d5;
+	}
 
-body.dragging #bookmarks tr.bookmark { display: none; }
-body.dragging #bookmarks tr.folder .newfolder { display: none; }
-body.dragging #bookmarks tr.folder td:not(:first-child) { display: none; }
-body.dragging #bookmarks tr[data-bookmark-id="0"] { display: none; }
+/* Nesting */
+tr[data-depth='0'] td:first-child { padding-left:6px; }
+tr[data-depth='1'] td:first-child { padding-left:1em; }
+tr[data-depth='2'] td:first-child { padding-left:2em; }
+tr[data-depth='3'] td:first-child { padding-left:3em; }
+tr[data-depth='4'] td:first-child { padding-left:4em; }
+tr[data-depth='5'] td:first-child { padding-left:5em; }
+tr[data-depth='6'] td:first-child { padding-left:6em; }
+tr[data-depth='7'] td:first-child { padding-left:7em; }
+tr[data-depth='8'] td:first-child { padding-left:8em; }
+tr[data-depth='9'] td:first-child { padding-left:9em; }
+tr td:first-child { padding-left:9em; }
 
-#lightboxcancel { float: right; }
-body:not(.dragging) #bmlightbox h2, body:not(.dragging) #lightboxcancel { display: none; }
-body:not(.dragging) #bookmarks tr.folder .tohere { display: none; }
-body #bmlightbox h2 {
-    color: white;
-    position: absolute;
-    top: 0; left: 10px; right: 10px; height: 10%;
-}
-body.dragging #bmlightbox {
-    position: fixed;
-    top: 5%; left: 5%; right: 5%; bottom: 5%;
-    background: black;
-}
-body.dragging #bmlightboxbody {
-    position: absolute;
-    top: 10%; bottom: 10px; left: 10px; right: 10px;
-    overflow-y: scroll;
-}
-body.dragging { background-color: #333; }
+body.dragging #bookmarks tr.bookmark,
+body.dragging #bookmarks tr.folder .newfolder,
+body.dragging #bookmarks tr.folder td:not(:first-child),
+body.dragging #bookmarks tr[data-bookmark-id='0'] {
+	display:none;
+	}
 
-#mover { opacity: 0; position: absolute; }
-#movertext, #movertexthider {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 150px;
-    height: 30px;
-    background: red;
-    color: white;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    line-height: 30px;
-    padding: 5px;
-}
-#movertexthider { background: white; }
+#lightbox-cancel {
+	float:right;
+	}
+
+body:not(.dragging) #lightbox h2,
+body:not(.dragging) #lightbox-cancel {
+	display:none;
+	}
+body:not(.dragging) #bookmarks tr.folder .tohere {
+	display:none;
+	}
+body #lightbox h2 {
+	color:white;
+	position:absolute;
+	top:0;
+	left:10px;
+	right:10px;
+	height:10%;
+	}
+body.dragging #lightbox {
+	position:fixed;
+	top:5%;
+	left:5%;
+	right:5%;
+	bottom:5%;
+	background:black;
+	}
+body.dragging #lightbox-body {
+	position:absolute;
+	top:10%;
+	bottom:10px;
+	left:10px;
+	right:10px;
+	overflow-y:scroll;
+	}
+body.dragging {
+	background-color:#333;
+	}
+
+#mover {
+	opacity:0;
+	position:absolute;
+	}
+#movertext,
+#movertexthider {
+	position:absolute;
+	right:0;
+	top:0;
+	width:150px;
+	height:30px;
+	background:red;
+	color:white;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	line-height:30px;
+	padding:5px;
+	}
+#movertexthider {
+	background:white;
+	}
 input.editing {
-    position: absolute;
-}
+	position:absolute;
+	}
 
-#bookmarks.filtered tr:not([data-bookmark-id="0"]) { display: none; }
-#bookmarks.filtered tr[data-bookmark-id="0"] td:first-child::before { content: "Filtered "; }
+#bookmarks.filtered tr:not([data-bookmark-id='0']) {
+	display:none;
+	}
+#bookmarks.filtered tr[data-bookmark-id='0'] td:first-child::before {
+	content:'Filtered ';
+	}

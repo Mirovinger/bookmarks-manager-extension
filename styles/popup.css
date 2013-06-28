@@ -1,22 +1,81 @@
+@import 'reset.css';
+@import 'global.css';
+
 body {
-    width: 400px;
-    height: 500px;
-    font-family: sans-serif;
-    background:red;
-}
-ul, li { padding: 0; margin: 0; }
-#toplevel ul {
-    margin-left: 1em;
-}
-li {
-    list-style: none;
-}
-li a {
-    display: block;
-    text-decoration: none;
-    color: black;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    outline: 0;
-}
+	padding:2px 2px 0 2px;
+	width:300px;
+	}
+
+.button {
+	margin:0;
+	width:100%;
+	outline:none;
+	border:none;
+	font-size:20px;
+	-webkit-appearance:none;
+	}
+/* Add */
+.button.add {
+	background:#3DCC3D;
+	color:#FFF;
+	}
+/* Remove */
+.button.remove {
+	background:#EB4E47;
+	color:#FFF;
+	}
+/* Top */
+.button.top {
+	padding:20px 0;
+	border-radius:4px 4px 0 0;
+	}
+.button.top:active {
+	padding:22px 0 18px;
+	}
+/* Manage */
+.button.manage {
+	padding:8px 0;
+	border-radius:0 0 4px 4px;
+	background:#CCC;
+	color:#000;
+	font-size:12px;
+	}
+.button.manage:active {
+	padding:9px 0 7px;
+	}
+.button.manage:hover,
+.button.manage:focus {
+	background:#DDD;
+	}
+
+/* Bookmarks */
+.bookmarks {
+	margin:5px 0 0;
+	border-radius:4px;
+	}
+	.bookmarks summary {
+		padding:5px 8px;
+		}
+		.bookmarks summary::-webkit-details-marker {
+			color:#1096D5;
+			}
+	.bookmarks summary:hover,
+	.bookmarks summary:focus {
+		outline:none;
+		background:#EEE;
+		}
+	.bookmarks ul {
+		padding-left:20px;
+		}
+		.bookmarks a {
+			display:block;
+			overflow:hidden;
+			padding:5px 8px;
+			white-space:nowrap;
+			text-overflow:ellipsis;
+			}
+		.bookmarks a:hover,
+		.bookmarks a:focus {
+			outline:none;
+			background:#E6F4FA;
+			}
