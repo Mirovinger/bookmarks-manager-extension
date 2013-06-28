@@ -311,11 +311,17 @@ function Bookmarks_API(options) {
 function selectIconAndAction(url, callback) {
     chrome_bookmarks.search(url, function(bms) {
         if (bms.length === 1) {
-            chrome.browserAction.setIcon({path:"bookmarked-icon@19.png"});
+            chrome.browserAction.setIcon({path:{
+                19:"images/added.png",
+                38:"images/added@2x.png"}
+            });
             chrome.contextMenus.update("bookmarkMenu", {title: "Unbookmark this page"});
             currentAction = "remove";
         } else {
-            chrome.browserAction.setIcon({path:"unbookmarked-icon@19.png"});
+            chrome.browserAction.setIcon({path:{
+                19:"images/add.png",
+                38:"images/add@2x.png"}
+            });
             chrome.contextMenus.update("bookmarkMenu", {title: "Bookmark this page"});
             currentAction = "add";
         }
