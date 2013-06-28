@@ -6,7 +6,7 @@ Bookmarks Manager adds basic bookmark functionality to Opera 15, allowing import
 
 ## Set up 
 
-1) Export your bookmarks from Opera 12 with Bookmarks > Manage Bookmarks > File > Export as HTML. This saves them in the (defacto) standard that's also used by Safari, Firefix, Delicious and others.
+1) Export your bookmarks from Opera 12 with Bookmarks > Manage Bookmarks > File > Export as HTML. This saves them in the (defacto) standard that's also used by Safari, Firefox, Delicious and others.
 
 2) Install and activate Bookmark Manager from the icon next to the address bar. Choose "Manage and Import" in the pop-up. Choose "Import bookmarks" and upload the file exported from Opera 12. 
 
@@ -26,7 +26,7 @@ A supplementary extension that adds a star icon inside the URL bar next to "Add 
 
 ## Credits ##
 
-This extension was made by Stuart Langridge (www.kryogenix.org) and Vadim Makeev ([@pepelsbey](http://twitter.com/pepelsbey)) with moral support by Bruce Lawson and is available on Github. Thanks to Mağruf Çolakoğlu for alpha testing, and generous people who allowed us to use their real bookmarks files for testing (given the format is so ill-documented - http://msdn.microsoft.com/en-us/library/aa753582(v=vs.85).aspx.
+This extension was made by Stuart Langridge (www.kryogenix.org) and Vadim Makeev ([@pepelsbey](http://twitter.com/pepelsbey)) with moral support by Bruce Lawson and is available on Github. Thanks to Mağruf Çolakoğlu for alpha testing, and generous people who allowed us to use their real bookmarks files for testing (given the format is so ill-documented - http://msdn.microsoft.com/en-us/library/aa753582(v=vs.85).aspx.)
 
 
 ## TODO ##
@@ -34,6 +34,6 @@ This extension was made by Stuart Langridge (www.kryogenix.org) and Vadim Makeev
 - Move "Filter bookmarks" into pop-up; increase its function
 - A supplementary extension to add one-click bookmarking inside the address bar. (Must be separate as Chrome extensions can't have both a page action and a browser action)
 - right click, bookmark this link (for bookmarklets)
-- show bookmarks in alphabetcal order
-- undo on moves and deletes.
+- show bookmarks in alphabetical order
+- undo on moves and deletes
 - remember open/closed status of folders in the popup
