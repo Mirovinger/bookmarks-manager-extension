@@ -159,7 +159,7 @@ function addBookmarkToFolder(bookmark, parent_element, options) {
         }, false);
         */
         var newfol = document.createElement("button");
-        newfol.appendChild(document.createTextNode("+ new folder"));
+        newfol.appendChild(document.createTextNode("New folder"));
         title.appendChild(newfol);
         newfol.className = "newfolder";
         newfol.onclick = function() {
@@ -177,7 +177,7 @@ function addBookmarkToFolder(bookmark, parent_element, options) {
     tr.setAttribute("data-bookmark-id", bookmark.id);
     var del = document.createElement("td");
     var dela = document.createElement("button");
-    dela.appendChild(document.createTextNode("delete"));
+    dela.appendChild(document.createTextNode("Delete"));
     del.appendChild(dela);
     dela.onclick = function(e) {
         chrome_bookmarks.getChildren(bookmark.id, function(children) {
@@ -193,11 +193,11 @@ function addBookmarkToFolder(bookmark, parent_element, options) {
 
     var mov = document.createElement("td");
     var movb = document.createElement("button");
-    movb.appendChild(document.createTextNode("move"));
+    movb.appendChild(document.createTextNode("Move"));
     mov.appendChild(movb);
     tr.appendChild(mov);
     movb.onclick = function() {
-        document.querySelector("#bmlightbox h2 span").firstChild.nodeValue = bookmark.title;
+        document.querySelector("#lightbox h2 span").firstChild.nodeValue = bookmark.title;
         BOOKMARK_TO_MOVE = bookmark.id;
         document.body.classList.add("dragging");
     };
@@ -226,7 +226,7 @@ function addBookmarkToFolder(bookmark, parent_element, options) {
     if (options.fade) tr.classList.add("yellow"); setTimeout(function() { tr.classList.remove("yellow"); }, 250);
 }
 
-document.getElementById("lightboxcancel").onclick = function() {
+document.getElementById("lightbox-cancel").onclick = function() {
     document.body.classList.remove("dragging");
 }
 

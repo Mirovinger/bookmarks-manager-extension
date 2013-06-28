@@ -61,9 +61,9 @@ function initiallyPopulateBookmarks() {
     });
 }
 
-document.querySelector("#add button").onclick = function() { bgpage.bookmarkCurrentTab(adaptMenu); };
-document.querySelector("#remove button").onclick = function() { bgpage.unbookmarkCurrentTab(adaptMenu); };
-document.querySelector("#manage button").onclick = function() { chrome.tabs.create({url: "options.html"}); };
+document.querySelector("#add").onclick = function() { bgpage.bookmarkCurrentTab(adaptMenu); };
+document.querySelector("#remove").onclick = function() { bgpage.unbookmarkCurrentTab(adaptMenu); };
+document.querySelector("#manage").onclick = function() { chrome.tabs.create({url: "options.html"}); };
 
 document.addEventListener('DOMContentLoaded', function () {
     adaptMenu();
